@@ -41,10 +41,6 @@ public class TaskManager {
         return s;
     }
 
-    public void addTask(String task) {
-        tasks.add(task);
-        System.out.println("Task added successfully.");
-    }
 
     public void listTask() {
         System.out.println("Things to do:");
@@ -52,22 +48,4 @@ public class TaskManager {
             System.out.println(i + ". " + tasks.get(i));
         }
     }
-
-    public void removeTask(int index) {
-        if (index >= 0 && index < tasks.size()) {
-            tasks.remove(index);
-            System.out.println("Task deleted successfully.");
-        } else {
-            System.out.println("Invalid index. The task does not exist.");
-        }
-    }
-    public void taskCompleted(int index) {
-        if (index >= 0 && index < tasks.size()) {
-            tasks.set(index, "[COMPLETED] " + tasks.get(index));
-            System.out.println("Task marked as completed.");
-        } else {
-            System.out.println("Invalid index. The task does not exist.");
-        }
-    }
-
 }
